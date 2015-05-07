@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/gerpsh.css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:500,700,400' rel='stylesheet' type='text/css'>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="row row-centered">
+	<div class="col-md-4 col-centered">
+		<h1>Oops</h1>
+	</div>
+</div>
+<div class="row row-centered">
+	<div class="col-md-4 col-centered">
+		<p class="body-text" style="text-align: center;">Page not found</p>
+	</div>
+</div>
+<div class="row row-centered">
+	<div class="col-md-4 col-centered">
+		<p class="body-text" style="text-align: center;"><a href="/" class="about-me-link">Go home.<a></p>
+	</div>
+</div>
+</body>
+</html>

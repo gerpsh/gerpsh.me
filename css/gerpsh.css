@@ -1,6 +1,24 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	color: #6BC7C2;
+	text-align: left;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
 h1 {
 	font-family: 'Raleway', sans-serif;
 	color: #FAAF40;
+	
+}
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 #header {
@@ -43,7 +61,7 @@ h1 {
 }
 
 .about-me-link {
-	color: #6BC7C2;;
+	color: #6BC7C2;
 }
 
 .row-centered {
@@ -116,7 +134,7 @@ h1 {
 }
 
 .nav-item {
-	width: 135px;
+	width: 177px;
 	display: inline;
 	float: left;
 	background-color: #6BC7C2;
@@ -129,3 +147,61 @@ h1 {
 	font-size: 10pt;
 	font-family: 'Raleway', sans-serif;
 }
+
+.resume-header {
+	font-size: 14pt;
+	color: #1C1C1C;
+	font-family: 'Raleway', sans-serif;
+	float: left;
+	margin-bottom: 0px;
+}
+
+.resume-dates {
+	font-size: 10pt;
+	color: #1C1C1C;
+	font-family: 'Raleway', sans-serif;
+	float: right;
+}
+
+.resume-title {
+	font-size: 10pt;
+	color: #1C1C1C;
+	font-family: 'Raleway', sans-serif;
+	float: left;
+}
+
+.resume-location {
+	font-size: 10pt;
+	color: #1C1C1C;
+	font-family: 'Raleway', sans-serif;
+	float: right;	
+}
+
+.resume-description {
+	font-size: 10pt;
+	color: #1C1C1C;
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
+}
+
+.resume-skills {
+	font-size: 10pt;
+	color: #1C1C1C;
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
+}
+
+.resume-skill-type {
+	font-weight: 700;
+	color: #1C1C1C;
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
+	color: #FAAF40;
+}
+
+.resume-publication {
+	text-align: left;
+	font-size: 10pt;
+	font-family: 'Raleway', sans-serif;
+}
+
