@@ -1,0 +1,168 @@
+.background {
+  fill: none;
+  pointer-events: all;
+  stroke-width: 3;
+  stroke: #000;
+}
+
+.panel-background {
+  fill: none;
+  pointer-events: all;
+  stroke-width: 3;
+  stroke: #000;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.state {
+  fill: #D8D8D8;
+}
+
+.county-border,
+.state-border {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.intern-site {
+  fill-opacity: .7;
+  stroke: #fff;
+  stroke-width: 0;
+}
+
+.bubble {
+  fill-opacity: 0.9;
+  stroke: #fff;
+  stroke-width: 0;
+}
+
+.bubble:hover {
+  fill-opacity: 0.75;
+}
+
+.intern-site:hover {
+  fill-opacity: 1.0;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.industry-bar {
+  /*fill: #A3D1FF;*/
+}
+
+.industry-bar:hover {
+  fill-opacity: 0.5;
+}
+
+.bar-text {
+  font-family: "PT Sans" ;
+  fill: #848484;
+  font-size: 9pt;
+}
+
+#industry-buffer {
+  display: none;
+}
+
+label { 
+    padding:0.4em 2em 0.4em 0;
+    font-family: "PT Sans"; 
+}
+
+fieldset {
+    font-family: sans-serif;
+    border: 0px solid #1F497D;
+    background: #F2F2F2;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+fieldset legend {
+    background: #1F497D;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ddd;
+    margin-left: 20px;
+}
+.toggle-btn-grp { 
+    margin:3px 0; 
+}
+.toggle-btn { 
+    text-align:centre; 
+    margin:5px 2px;
+    padding:0.4em 1em; 
+    color:#424242; 
+    background-color:transparent; 
+    border-radius:10px; 
+    display:inline-block; 
+    cursor:pointer;
+}
+
+.toggle-btn:hover { 
+    background:#A3D1FF;
+    color: #000;
+}
+
+
+.toggle-btn.success { 
+    background:#f39c12;
+}
+
+
+.visuallyhidden { 
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px; 
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { 
+    clip: auto; 
+    height: auto; 
+    margin: 0; 
+    overflow: visible; 
+    position: static; 
+    width: auto; 
+}
+
+.styled-select select {
+   background: transparent;
+   width: 360px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 36px;
+   /*-webkit-appearance: none;*/
+}
+
+.styled-select {
+   width: 360px;
+   height: 34px;
+   overflow: hidden;
+   background: #ddd;
+   border: 1px solid #ccc;
+}
+
+.filter-label {
+  font-size:22px;
+  padding: 0.4em 0.2em 0.4em 0;
+}
+
+

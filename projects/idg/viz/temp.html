@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Ideal Gas Law</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/igl-style.css" rel="stylesheet">
+    <link rel="icon" href="static/p.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <audio>
+    <source src="static/pop2.wav" type="audio/wav">
+    </audio>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        The Ideal Gas Law
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">1. Intro/Overview</a>
+                </li>
+                <li>
+                    <a href="temp.html">2. Temperature</a>
+                </li>
+                <li>
+                    <a href="mass.html">3. Mass</a>
+                </li>
+                <li>
+                    <a href="volume.html">4. Volume</a>
+                </li>
+                <li>
+                    <a href="all.html">5. Try Them All</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-centered" id='temp'>
+                    	<a name='temp'></a>
+                    	<h1>Temperature</h1>   	
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-lg-10 col-centered">
+                        <p class='instruction'>
+                            First, we'll look at how things change with temperature.  If we raise
+                            the temperature of the gas heating container, we'll see an increase in
+                            pressure; the particles are going faster now, so they're hitting the
+                            side of the container more often.  Every time one hits a side, it makes
+                            a 'pop' sound.
+                            Use the slider to see what happens to
+                            pressure when you adjust the temperature.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-1" id="temp-viz">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                	<div class="col-lg-offset-1 col-lg-6">
+                    	<p class="instruction">
+                    		As you can see, pressure increases linearly with temperature; as you raise temperature, pressure increases at a similar rate.
+                    	</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-offset-1 col-lg-2">
+                        <p>
+                        <label for=speed id="temp-val">Temperature: 273K</label>
+                        <input type=range min=1 max=5 value=3 id=temp-speed onchange='change_speed($("#temp-speed").val());'>
+                        </p>
+                        <br>
+                        <p>
+                        <div id="press-val" onclick-"change_mass(2);change_mass(3)"><b>Pressure: 1.5atm</b></div>
+                        </p>
+                        <br>
+                        <p>
+                        <div>Mass: 1.5 mol</div>
+                        </p>
+                        <br>
+                        <p>
+                        <div>Volume: 22.4 L</div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-1" id="temp-chart-div">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/temp.js"></script>
+    <!-- Page scripts -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    
+    $('a').click(function(){
+    	$('html, body').animate({
+        	scrollTop: $( $.attr(this, 'href') ).offset().top
+    	}, 500);
+    	return false;
+	});
+	</script>
+</body>
+
+</html>

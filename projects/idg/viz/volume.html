@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Ideal Gas Law</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/igl-style.css" rel="stylesheet">
+    <link rel="icon" href="static/p.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <audio>
+    <source src="static/pop2.wav" type="audio/wav">
+    </audio>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        The Ideal Gas Law
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">1. Intro/Overview</a>
+                </li>
+                <li>
+                    <a href="temp.html">2. Temperature</a>
+                </li>
+                <li>
+                    <a href="mass.html">3. Mass</a>
+                </li>
+                <li>
+                    <a href="volume.html">4. Volume</a>
+                </li>
+                <li>
+                    <a href="all.html">5. Try Them All</a>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-centered" id='volume'>
+                        <h1>Volume</h1>    
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-lg-10 col-centered">
+                        <p class='instruction'>
+                            Moving on the volume. Let's say I magically make the box bigger.
+                            This means that the particles will be colliding with the sides of
+                            the box less often.  Use the slider to see what happens when you changes the volume:
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-1" id="vol-viz">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                	<div class="col-lg-offset-1 col-lg-6">
+                    	<p class="instruction">
+                    		You'll notice that the pressure doesn't change linearly; this is
+                            because when you rearrage the equation to solve for P, V is underneath
+                            everything, and P will decrease more and more slowly as V increases.
+                    	</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-offset-1 col-lg-2">
+                        <p>
+                        <label for=volume id="vol-val">Volume: 22.4 L</label>
+                        <input type=range min=1 max=5 value=3 id=vol-volume onchange='change_volume($("#vol-volume").val());'>
+                        </p>
+                        <br>
+                        <p>
+                        <div id="press-val"><b>Pressure: 1.5atm</b></div>
+                        </p>
+                        <br>
+                        <p>
+                        <div>Mass: 1.5 mol</div>
+                        </p>
+                        <br>
+                        <p>
+                        <div>Temperature: 273 K</div>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-1" id="vol-chart-div">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/volume.js"></script>
+    <!-- Page scripts -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    
+    $('a').click(function(){
+    	$('html, body').animate({
+        	scrollTop: $( $.attr(this, 'href') ).offset().top
+    	}, 500);
+    	return false;
+	});
+	</script>
+</body>
+
+</html>

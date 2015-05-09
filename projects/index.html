@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<title>Gerald Shaeffer</title>
+<head>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/gerpsh.css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:500,700,400' rel='stylesheet' type='text/css'>
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62716929-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body>
+  <div id="container-fluid">
+    <br>
+    <div class="row" id="header">
+      <div class="col-md-5 col-md-offset-3" id="top-banner">
+        <p id="my-name">
+          <a href="/"><img src="/images/bug.png" height="100px" width="100px"></a>
+          <a href="/" id="my-name-anchor">Gerald P. Shaeffer</a>
+        </p>
+      </div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-md-6 col-centered nav-row">
+        <ul id="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resume/">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row row-centered">
+      <div class="col-md-6 col-centered">
+        <h1>Projects</h1>
+        <hr>
+      </div>
+    </div>
+    <br>
+    <div id="project-container">
+    </div>
+</body>
+<script>
+  var projects = [
+                    
+                    {
+                      "name": "eBridge to Health",
+                      "who": "U. of Michigan Medical School",
+                      "image": "ebridge.png"
+                    },
+                    {
+                      "name": "Curation Dashboard",
+                      "who": "SocialWellth, Inc.",
+                      "image": "swdashboard.png"
+                    },
+                    {
+                      "name": "Curation Database",
+                      "who": "SocialWellth, Inc.",
+                      "image": "swdatabase.png"
+                    },
+                    {
+                      "name": "UMSI Internships",
+                      "who": "U of M School of Information",
+                      "image": "internships.png"
+                    },
+                    {
+                      "name": "Ideal Gas Law",
+                      "who": "Penn State Chemistry Dept.",
+                      "image": "idg.png"
+                    },
+                    {
+                      "name": "quit.io",
+                      "who": "SI606: Personal Informatics",
+                      "image": "quitio.png"
+                    },
+                    {
+                      "name": "AthlEAT",
+                      "who": "Innovation in Action Challenge",
+                      "image": "athleat.png"
+                    },
+                 ];
+
+  var append = "";
+
+  for(var i in projects) {
+    var name = projects[i].name;
+    var who = projects[i].who;
+    var image = projects[i].image;
+    var path = projects[i].image.split('.')[0]
+
+    j = parseInt(i) + 1;
+    var body="";
+
+    if ((j % 3) == 0) {
+      body = '<div class="col-md-2 col-centered project-box">' +
+             '<p class="project-title">' + name + '</p>' + 
+             '<p class="project-subtitle">' + who + '</p>' +
+             '<a href="/projects/' + path + '/"><img src="/projects/images/' + image + '" class="project-img" height="160px" width="160px"></a>' +
+             '</div>' + 
+             '</div>' +
+             '<br>';
+
+    } else if ((j % 3) == 1) {
+      body = '<div class="row row-centered">' +
+             '<div class="col-md-2 col-centered project-box">' +
+             '<p class="project-title">' + name + '</p>' + 
+             '<p class="project-subtitle">' + who + '</p>' +
+             '<a href="/projects/' + path + '/"><img src="/projects/images/' + image + '" class="project-img" height="160px" width="160px"></a>' +
+             '</div>';
+
+    } else if ((j % 3) == 2) {
+      body = '<div class="col-md-2 col-centered project-box">' +
+             '<p class="project-title">' + name + '</p>' + 
+             '<p class="project-subtitle">' + who + '</p>' +
+             '<a href="/projects/' + path + '/"><img src="/projects/images/' + image + '" class="project-img" height="160px" width="160px"></a>' +
+             '</div>'
+    } 
+    append += body;
+  }
+
+  var postfix = ""
+  var len = projects.length;
+  if ((len %  3) == 1) {
+    postfix = '<div class="col-md-2 col-centered project-box">' +
+              '</div>' +
+              '<div class="col-md-2 col-centered project-box">' +
+              '</div>' +
+              '</div>';
+  } else if ((len %  3) == 2) {
+    postfix = '<div class="col-md-2 col-centered project-box">' +
+              '</div>' +
+              '</div>';
+  }
+  $("#project-container").append(append + postfix);
+
+</script>
+
+
+</html>
